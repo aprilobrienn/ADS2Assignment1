@@ -24,3 +24,59 @@ void reserveCar(); //to reserve
 void viewAllCars(); //to see all
 void viewACar(); //specific car
 
+void main() {
+
+    int menuOption; //to take value for menu choice
+
+    do {
+        printf("\nCar Showroom\n");
+        printf("1. Add a car to the showroom\n");
+        printf("2. Sell car\n");
+        printf("3. Reserve/Unreserve a car\n");
+        printf("4. View all cars in the showroom\n");
+        printf("5. View a specific car\n");
+        printf("6. ======\n"); //undecided function
+        printf("7. Exit the system\n");
+        printf("Please enter the number for which selection you would like to make: ");
+        scanf("%d", &menuOption);
+
+        while (menuOption <= 0 && menuOption >= 8)
+        {
+            printf("Invalid number. Please enter a number 1-7");
+            scanf("%d", &menuOption);
+        }
+        if (menuOption == 1)
+        {
+            addCar();
+        }
+        else if (menuOption == 2)
+        {
+            sellCar();
+        }
+        else if (menuOption == 3)
+        {
+            reserveCar();
+        }
+        else if (menuOption == 4)
+        {
+            viewAllCars();
+        }
+        else if (menuOption == 5)
+        {
+            viewACar();
+        }
+        else if (menuOption == 6)
+        {
+            XXXXXXX; //undecided yet
+        }
+        else if (menuOption == 7)
+        {
+            printf("Exiting System");
+        }
+
+    } while (menuOption != 7); //when choice =7 then system ends
+}
+
+
+
+
