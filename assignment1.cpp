@@ -77,6 +77,45 @@ void main() {
     } while (menuOption != 7); //when choice =7 then system ends
 }
 
+void addCar() {
+    if (*head != NULL && getCarCount() >= MAX_CARS) {
+        printf("ERROR! Showroom full\n");
+        return;
+
+
+        printf("Enter car registration: ");
+        scanf("%s", newCar->registration);
+    }
+
+
+void sellCar() {
+
+}
+
+void reserveCar() {
+
+}
+
+void viewAllCars() {
+
+}
+
+void viewACar() {
+
+}
+
+int getCarCount(struct Car* head) { //this is so we can get car count
+    int count = 0;
+    struct Car* acar = head;
+    while (acar != NULL) {
+        count++;
+        acar = acar->next;
+    }
+    return count;
+}
+
+
+
 
 
 
